@@ -37,18 +37,18 @@ public class UserController{
     }
 
     //find by id
-    @GetMapping("/{_id}")
-    public String findbyid(@PathVariable String _id){
-        Optional<Employee> emp = userRepo.findById(_id);
-        if (emp.isPresent()) {
-            System.out.println("employee found with id " + _id);
-            return "Emp found" ;
-        }
-        else{
-            System.out.println("employee is not found with id " + _id);
-            return " emp not founded" ;
-        }
-    }
+    // @GetMapping("/{_id}")
+    // public String findbyid(@PathVariable String _id){
+    //     Optional<Employee> emp = userRepo.findById(_id);
+    //     if (emp.isPresent()) {
+    //         System.out.println("employee found with id " + _id);
+    //         return "Emp found" ;
+    //     }
+    //     else{
+    //         System.out.println("employee is not found with id " + _id);
+    //         return " emp not founded" ;
+    //     }
+    // }
 
     //Create a new employee
     @PostMapping("/add")
